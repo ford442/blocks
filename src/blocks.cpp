@@ -331,7 +331,7 @@ void Application::MainLoop(void* arg)
 	sr.h = FRAME_HEIGHT;
 	
 #ifdef __EMSCRIPTEN__
-	emscripten_get_canvas_size(&ww, &wh, false);
+	emscripten_get_canvas_element_size(&ww, &wh, false);
 #else
 	SDL_GetWindowSize(window_, &ww, &wh);
 #endif
